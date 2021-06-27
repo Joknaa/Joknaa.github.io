@@ -710,6 +710,8 @@ input[type="button"].small,
 
 .feature.left .content {
     padding-right: 0;
+    text-align: center;
+
 }
 
 .feature.right {
@@ -727,6 +729,8 @@ input[type="button"].small,
 
 .feature.right .content {
     padding-left: 0;
+    text-align: center;
+
 }
 
 .feature.long .content {
