@@ -38,7 +38,6 @@
 <!-- Main -->
 <div id="main">
     <div class="box container">
-
         <section>
             <header>
                 <h3>Background</h3>
@@ -91,7 +90,7 @@
             </div>
         </section>
         <section class="feature right">
-            <a href="https://github.com/Joknaa/PixelArt" style="background-color: black"  class="image "><img  src="images/Porjects/Dow_TileSet.png" alt=""/></a>
+            <a href="https://github.com/Joknaa/PixelArt" style="background-color: black" class="image "><img src="images/Porjects/Dow_TileSet.png" alt=""/></a>
             <div class="content">
                 <h3>Pixel Art</h3>
                 <p>After "Ookun's Adventure", i started drawing all the art i use in my games, as well as animating!</p>
@@ -99,29 +98,59 @@
         </section>
     </div>
 
+    <header class="major container 100%">
+        <h2>Skills</h2>
+    </header>
     <div class="box container">
         <section>
-            <header>
-                <h3>Skills</h3>
-            </header>
             <ul class="default">
-                <li><b>Soft Skills: </b>Autonome, Motivated, Responsible, Teamwork.</li>
-                <li><b>Programming Languages: </b>Java, Swing, C#, C, HTML, CSS, JS, PHP, SQL, ...</li>
-                <li><b>Other Tools: </b>Unity, Asprite, Git, Intellij ... </li>
+                <div class="row">
+                    <div class="4u 12u(mobilep)">
+                        <b>Soft Skills: </b>
+                        <li>Autonome</li>
+                        <li>Motivated</li>
+                        <li>Responsible</li>
+                        <li>Teamwork</li>
+                    </div>
+                    <div class="4u 12u(mobilep)">
+                        <b>Programming Languages: </b>
+                        <li>Java (Swing)</li>
+                        <li>C#</li>
+                        <li>C</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>PHP</li>
+                    </div>
+                    <div class="4u 12u(mobilep)">
+                        <b>Other Tools: </b>
+                        <li>Unity</li>
+                        <li>Asprite</li>
+                        <li>Git</li>
+                        <li>Intellij</li>
+                    </div>
+                </div>
             </ul>
         </section>
     </div>
     <div class="box container">
 
-    <section>
+        <section>
             <header>
                 <h3>Languages</h3>
             </header>
             <ul class="default">
-                <li><b>Arabic: </b>Native.</li>
-                <li><b>Tamazight: </b>Native.</li>
-                <li><b>English: </b>C2 Proficient.</li>
-                <li><b>French: </b>Intermediate.</li>
+                <div class="row">
+                    <div class="4u 12u(mobilep)">
+                        <li><b>Arabic: </b>Native.</li>
+                        <li><b>Tamazight: </b>Native.</li>
+                    </div>
+                    <div class="4u 12u(mobilep)">
+                        <li><b>English: </b>C2 Proficient.</li>
+                    </div>
+                    <div class="4u 12u(mobilep)">
+                        <li><b>French: </b>Intermediate.</li>
+                    </div>
             </ul>
         </section>
         <!--
@@ -260,48 +289,49 @@
         -->
     </div>
 
-<!--
-    <footer class="major container 75%">
-        <h3>Get shady with science</h3>
-        <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
-        <ul class="actions">
-            <li><a href="#" class="button">Join our crew</a></li>
-        </ul>
-    </footer>
--->
+    <!--
+        <footer class="major container 75%">
+            <h3>Get shady with science</h3>
+            <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">Join our crew</a></li>
+            </ul>
+        </footer>
+    -->
 </div>
 
 <!-- Footer -->
 <div id="footer">
     <div class="container 75%">
 
-        <!--<header class="major last">
+        <--
+        <header class="major last">
             <h2>Questions or comments?</h2>
         </header>
         <p>Feel Free to leave any Feedback, Comment, or Question !</p>
 
-        <form method="post" action="#">
+        <form method="post">
             <div class="row">
                 <div class="6u 12u(mobilep)">
-                    <input type="text" name="name" placeholder="Name"/>
+                    <input type="text" name="name" id="SenderName" placeholder="Name"/>
                 </div>
                 <div class="6u 12u(mobilep)">
-                    <input type="email" name="email" placeholder="Email"/>
+                    <input type="email" name="email" id="SenderEmail" placeholder="Email"/>
                 </div>
             </div>
             <div class="row">
                 <div class="12u">
-                    <textarea name="message" placeholder="Message" rows="6"></textarea>
+                    <textarea name="message" id="SenderMessage" placeholder="Message" rows="6"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="12u">
                     <ul class="actions">
-                        <li><input type="submit" value="Send Message"/></li>
+                        <li><input type="submit" value="Send Message" onclick="sendMail()"/></li>
                     </ul>
                 </div>
             </div>
-        </form>-->
+        </form>
         <header class="major last">
             <h2>My Contacts</h2>
         </header>
@@ -316,10 +346,20 @@
 
         <ul class="copyright">
             <li>&copy; Oknaa. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Designed by: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
 
     </div>
 </div>
 </body>
 </html>
+<script>
+    function sendMail() {
+        let myEmail = "mohammadLaadidaoui@gmail.com";
+        let subject = "Portfolio Review";
+        let SenderName = document.getElementById("SenderName").value;
+        let SenderMessage = document.getElementById("SenderMessage").value + "\n" + SenderName;
+
+        window.location.href = "mailto:" + myEmail + "?subject=" + subject + "&body=" + encodeURIComponent(SenderMessage);
+    }
+</script>
